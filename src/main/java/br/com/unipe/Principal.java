@@ -11,8 +11,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
 
-import br.com.unipe.config.SwaggerConfig;
+import br.com.hermes.hermeswp.config.SwaggerConfig;
 import br.com.unipe.util.LoggerPadrao;
+
 
 @SpringBootApplication
 @Import(SwaggerConfig.class)
@@ -45,6 +46,9 @@ public class Principal extends SpringBootServletInitializer {
             InetAddress.getLocalHost().getHostAddress(),
             env.getProperty("server.port"),
             env.getProperty("server.servlet.context-path"));
+	
 		
 	}
+	
+	
 }
